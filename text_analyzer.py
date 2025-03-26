@@ -1,18 +1,21 @@
 import re
 
+
 def count_words(text):
-    """Count words in text using regular expressions"""
+    """Count words in text using regular expressions."""
     if not text.strip():
         return 0
     words = re.split(r'[,;:\s\t]+', text)
     return len([w for w in words if w.strip()])
 
+
 def count_sentences(text):
-    """Count sentences in text using regular expressions"""
+    """Count sentences in text using regular expressions."""
     if not text.strip():
         return 0
     sentences = re.split(r'[.!?…]+', text)
     return len([s for s in sentences if s.strip()])
+
 
 def count_words_and_sentences(file_path):
     """
