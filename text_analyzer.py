@@ -14,7 +14,7 @@ def count_sentences(text):
     sentences = re.split(r'[.!?…]+', text)
     return len([s for s in sentences if s.strip()])
 
-def analyze_text_file(file_path):
+def count_words_and_sentences(file_path):
     """
     Analyze text file and return word and sentence counts.
     
